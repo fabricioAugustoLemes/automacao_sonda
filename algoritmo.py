@@ -1,11 +1,12 @@
 import pyautogui
 import time
 
+pyautogui.FAILSAFE = False
 
 
-# Aguarde um pouco antes de executar o comando (opcional)
-print("O programa começará em 3 segundos. Alterne para a janela onde deseja executar.")
-time.sleep(3)
-
-pyautogui.click(x=100, y=200)
+print(pyautogui.position())
+# Dá tempo para você posicionar o mouse e observar o movimento
+time.sleep(2)
+# Move o mouse para a posição (100, 100) durante 1 segundo
+pyautogui.moveTo(100, 100, duration=1)
 
